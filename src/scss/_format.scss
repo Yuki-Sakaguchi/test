@@ -1,0 +1,92 @@
+/* ==================
+  format
+
+    index
+      - margin
+      - left
+      - font
+================== */
+
+/* ==================
+  margin
+================== */
+// margin-top, margin-bottom
+$tmp: "";
+@for $i from 0 through 24 {
+
+  $px: $i*5;
+
+	@if $px < 10 {
+		$tmp: "0#{$px}";
+	} @else {
+		$tmp: $px;
+	}
+
+  .mt-#{$tmp} {
+    margin-top: #{$px}px !important;
+  }
+
+  .mb-#{$tmp} {
+    margin-bottom: #{$px}px !important;
+  }
+}
+
+
+/* ==================
+  layout
+================== */
+.al-c {
+  text-align: center !important;
+}
+
+.al-r {
+  text-align: right !important;
+}
+
+.al-l {
+  text-align: left !important;
+}
+
+
+/* ==================
+  font
+================== */
+.x-large {
+  font-size: 2rem !important;
+}
+
+.large {
+  font-size: 1.6rem !important;
+}
+
+.small {
+  font-size: 0.8rem !important;
+}
+
+.x-small {
+  font-size: 0.6rem !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.f-jp {
+  font-family: $JP_FONT_FAMILY !important;
+}
+
+.c-red {
+  color: $C_RED !important;
+}
+
+.c-white {
+  color: $C_WHITE !important;
+}
+
+.c-gray {
+  color: $C_DARK_GRAY !important;
+}

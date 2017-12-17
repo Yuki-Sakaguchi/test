@@ -1,0 +1,47 @@
+//- 変数設定
+block setVariable
+
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(http-quiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        //- ページ情報
+        title #{meta.title}
+        meta(name='keywords', content=`${meta.keywords}`)
+        meta(name='description', content=`${meta.description}`)
+
+        //- OGP情報
+        meta(property='og:title', content=`${og.title}`)
+        meta(property='og:type', content=`${og.type}`)
+        meta(property='og:description', content=`${og.description}`)
+        meta(property='og:url', content=`${og.url}`)
+        meta(property='og:image', content=`${og.image}`)
+
+        //- Twitter情報
+        meta(name='twitter:card', content=`${twitter.card}`)
+        meta(name='twitter:site', content=`${twitter.site}`)
+        meta(name='twitter:title', content=`${twitter.title}`)
+        meta(name='twitter:description', content=`${twitter.description}`)
+
+        link(rel="apple-touch-icon-precomposed", href="/images/apple-touch-icon.png")
+        link(rel="shortcut icon", href="/images/favicon.ico")
+
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css")
+        link(rel='stylesheet', href='/css/main.css')
+
+    body
+        //- 共通ヘッダー
+        include _header.pug
+
+        //- メインコンテンツ
+        block body
+
+        //- 共通フッター
+        include _footer.pug
+
+        //- スクリプト
+        include _script.pug

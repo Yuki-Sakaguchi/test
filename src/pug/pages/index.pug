@@ -1,0 +1,211 @@
+extends ../common/_layout.pug
+
+block setVariable
+    -
+        var url = 'http://localhost:8000';
+
+        var meta = {
+            title: 'タイトル',
+            description: '説明文',
+            keywords: 'きーわーど,キーワード,keywords'
+        }
+
+        var og = {
+            title: meta.title,
+            type: 'website',
+            description: meta.description,
+            url: url,
+            image: url + '/images/ogp.png'
+        }
+
+        var twitter = {
+            card: 'summary_large_image',
+            site: '@test',
+            title: meta.title,
+            description: meta.description
+        }
+
+block body
+  .wrapper
+    
+    //- about
+    section.section
+      .inner
+        
+        hgoup.section-title
+          h2 ABOUT TECPRO BARRIERS
+          h3 テックプロバリヤーズについて
+        
+        p.al-c
+          |F1をはじめとするモータースポーツのレースシーンにおいて、
+          |その安全性を守るために開発されたバリアシステムです。<br class="pc-elm">
+          |現在では世界中のサーキットで急速に普及されています。<br class="pc-elm">
+          |サーキット以外にもイベント会場の人員誘導や立入り規則など様々な分野で<br class="pc-elm">
+          |TECPRO VARRIERSをご利用していただきたく、専用サイズの販売・レンタルを開始しました。
+        
+        .belt
+          .blue
+            .belt-inner
+              p 専用ベルトで<br class="pc-elm">数100mの連列可能
+          .white
+            .belt-inner
+              p 司会をさえぎらない<br class="pc-elm">ジャストサイズ
+          .red
+            .belt-inner
+              p レイアウトが自由自在
+
+        ul.list.column-2
+          li.list__item
+            img.list__item-img(src="/images/sample01.png")
+            h4.list__item-title.f-jp 高い安全性と信頼性を実現
+            p.list__item-text
+              |TECPRO BARRIERSは、耐久性の強い弾性プラスチックを強度の強いナイロンストラップでつなげる「連結式バリア」です。
+              |万一の事故が起きても、連結されたTECPRO BARRIERSが衝撃を吸収し、衝突による破損や破裂を軽減します。
+          li.list__item
+            img.list__item-img(src="/images/sample01.png")
+            h4.list__item-title.f-jp 様々シーンで活躍する高い汎用性
+            p.list__item-text
+              |コーナー取りも簡単にできるためイベントの動線作りにも役立ちます。
+              |ご購入の場合は、豊富な色とサイズからお選びいただけ、ご希望のロゴも入れられます。<br>
+              |レンタルは、赤 x 白 or 青 x 白の２パターンですが、ステッカーやカバーをかけるなど
+              |装飾が可能であり、現場にあった雰囲気を作ることができます。
+
+        p.al-c.yellow-box.large.f-jp メニューからバンプレットがダウンロードできます。
+
+        ul.list.column-4
+          li.list__item
+            img.list__item-img(src="/images/sample02.png")
+            p.list__item-text 学校行事や地位のイベントに！
+          li.list__item
+            img.list__item-img(src="/images/sample02.png")
+            p.list__item-text マラソン大会などの動線作りに
+          li.list__item
+            img.list__item-img(src="/images/sample02.png")
+            p.list__item-text 車両を用いる場の安全対策に
+          li.list__item
+            img.list__item-img(src="/images/sample02.png")
+            p.list__item-text 設置は弊社にお任せください！
+
+      .youtube-area
+          .youtube
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/1HzSiBYWgnQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+
+    //- contact
+    section.section
+      .bg-img
+      .inner
+
+          hgoup.section-title
+            h2 CONTACT
+            h3 お問い合わせ
+          
+          p.al-c.f-jp.x-large
+            |イベントのご相談、購入・レンタルのお見積り依頼等お気軽にお問い合わせください。
+
+          p.al-c.yellow-box.mt-10.mb-30
+            |電話でのお問い合わせ
+            |<strong class="bold">TEL<span class="x-large">048-783-4040</span></strong>
+            |（受付時間 平日9時〜17時)
+          
+          p.al-c.large.bold.mb-20
+            |メールでのお問い合わせは下記のメールフォームよりお願いいたします。
+          
+          p.al-c.small.mb-30
+            |お問い合わせありがとうございます。ご質問などの内容によってはお時間をいただくこともございます。<br>
+            |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう可能性がございます。<br>
+            |迷惑メールフォルダもご確認いただきますようお願いいたします。
+          
+          form(action="/", method="post")
+            .contact
+              .row
+                .contact-title.required
+                  p 会社名（個人の方は個人と記入ください）
+                .contact-input
+                  input(name="type")
+              .row
+                .contact-title.required
+                  p ご担当者名
+                .contact-input
+                  input(name="type")
+              .row
+                .contact-title.required
+                  p メールアドレス
+                .contact-input
+                  input(name="type")
+                  p.x-small.caution
+                    |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう
+                    |可能性がございます。迷惑メールフォルダもご確認いただきますようお願い致します。
+              .row
+                .contact-title.required
+                  p 電場番号
+                .contact-input.tel
+                  input.tel(name="type")
+                  span.quote -
+                  input.tel(name="type")
+                  span.quote -
+                  input.tel(name="type")
+              .row
+                .contact-title.required
+                  p お問い合わせ内容
+                .contact-input
+                  textarea
+              
+            p.c-red.mt-20.mb-10 レンタルについてのお問い合わせの方は、以下の質問にもお答えください。
+
+            .contact
+              .row
+                .contact-title.required
+                  p ご利用期間
+                .contact-input
+                  input(name="type")
+              .row
+                .contact-title.required
+                  p ご利用場所
+                .contact-input
+                  input(name="type")
+              .row
+                .contact-title.required
+                  p ご利用内容
+                .contact-input
+                  input(name="type")
+              .row
+                .contact-title.required
+                  p その他
+                .contact-input
+                  textarea
+
+            input.submit-btn(type="submit", value="送信確認")
+
+
+    //- faq
+    section.sectionbg-w
+      .inner
+
+          hgoup.section-title
+            h2 FAQ
+            h3 よくある質問
+
+    //- company
+    section.section
+      .inner
+
+          hgoup.section-title
+            h2 COMPANY
+            h3 会社概要
+
+          .logo
+            img(src="/images/logo.png")
+          
+          .company-info.mt-20
+            p.company-info-title.al-c
+              |TECPRO BARRIERS 日本国内販売元<br>
+              span.x-large BLOCCO
+              |（ブロッコ）
+            p.company-info-text.al-c
+              |〒331-0801　埼玉県さいたま市北区今羽町77-1<br>
+              |TEL048-783-4040　FAX048-669-8126　MAIL info@blocco-ss.com
+
+            .fb
+              a(href="#")
+                i.fa.fa-facebook-official
+            

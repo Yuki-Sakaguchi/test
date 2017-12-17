@@ -1,0 +1,855 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==================
+    base
+================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.4em;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+body,
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  body,
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+/* ==================
+    animation
+================== */
+@keyframes wideBox {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ==================
+  format
+
+    index
+      - margin
+      - left
+      - font
+================== */
+/* ==================
+  margin
+================== */
+.mt-00 {
+  margin-top: 0px !important;
+}
+
+.mb-00 {
+  margin-bottom: 0px !important;
+}
+
+.mt-05 {
+  margin-top: 5px !important;
+}
+
+.mb-05 {
+  margin-bottom: 5px !important;
+}
+
+.mt-10 {
+  margin-top: 10px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mt-25 {
+  margin-top: 25px !important;
+}
+
+.mb-25 {
+  margin-bottom: 25px !important;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mt-35 {
+  margin-top: 35px !important;
+}
+
+.mb-35 {
+  margin-bottom: 35px !important;
+}
+
+.mt-40 {
+  margin-top: 40px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mt-45 {
+  margin-top: 45px !important;
+}
+
+.mb-45 {
+  margin-bottom: 45px !important;
+}
+
+.mt-50 {
+  margin-top: 50px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mt-55 {
+  margin-top: 55px !important;
+}
+
+.mb-55 {
+  margin-bottom: 55px !important;
+}
+
+.mt-60 {
+  margin-top: 60px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.mt-65 {
+  margin-top: 65px !important;
+}
+
+.mb-65 {
+  margin-bottom: 65px !important;
+}
+
+.mt-70 {
+  margin-top: 70px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+.mt-75 {
+  margin-top: 75px !important;
+}
+
+.mb-75 {
+  margin-bottom: 75px !important;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mt-85 {
+  margin-top: 85px !important;
+}
+
+.mb-85 {
+  margin-bottom: 85px !important;
+}
+
+.mt-90 {
+  margin-top: 90px !important;
+}
+
+.mb-90 {
+  margin-bottom: 90px !important;
+}
+
+.mt-95 {
+  margin-top: 95px !important;
+}
+
+.mb-95 {
+  margin-bottom: 95px !important;
+}
+
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+.mt-105 {
+  margin-top: 105px !important;
+}
+
+.mb-105 {
+  margin-bottom: 105px !important;
+}
+
+.mt-110 {
+  margin-top: 110px !important;
+}
+
+.mb-110 {
+  margin-bottom: 110px !important;
+}
+
+.mt-115 {
+  margin-top: 115px !important;
+}
+
+.mb-115 {
+  margin-bottom: 115px !important;
+}
+
+.mt-120 {
+  margin-top: 120px !important;
+}
+
+.mb-120 {
+  margin-bottom: 120px !important;
+}
+
+/* ==================
+  layout
+================== */
+.al-c {
+  text-align: center !important;
+}
+
+.al-r {
+  text-align: right !important;
+}
+
+.al-l {
+  text-align: left !important;
+}
+
+/* ==================
+  font
+================== */
+.x-large {
+  font-size: 2rem !important;
+}
+
+.large {
+  font-size: 1.6rem !important;
+}
+
+.small {
+  font-size: 0.8rem !important;
+}
+
+.x-small {
+  font-size: 0.6rem !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.f-jp {
+  font-family: "Sawarabi Mincho" !important;
+}
+
+.c-red {
+  color: #e70012 !important;
+}
+
+.c-white {
+  color: white !important;
+}
+
+.c-gray {
+  color: #dadada !important;
+}
+
+/* ==================
+  common
+
+  index
+    - common
+    - wrapper
+    - section
+    - header
+    - global menu
+    - belt
+    - list
+    - box
+    - youtube
+    - contact
+    - faq
+    - company
+    - footer
+================== */
+/* ==================
+  common
+================== */
+/* ==================
+  wrapper
+================== */
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  display: block;
+  margin: auto;
+}
+
+.pc-elm {
+  display: block;
+}
+
+.sp-elm {
+  display: none;
+}
+
+/* ==================
+  section
+================== */
+.section {
+  position: relative;
+  background-color: #efefef;
+  padding: 30px 0;
+}
+
+.section.bg-w {
+  background-color: white;
+}
+
+.section .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/images/top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  opacity: 0.1;
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.section-title h3 {
+  font-size: 1.6rem;
+}
+
+.section p {
+  line-height: 2;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* ==================
+  hader
+================== */
+.header {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+/* ==================
+  global menu
+================== */
+.global-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+}
+
+.global-menu-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.global-menu-list__item {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.global-menu-list__item a {
+  display: block;
+  padding: 20px 0;
+  color: black;
+}
+
+.menu-title {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* ==================
+  belt 
+================== */
+.belt {
+  margin: 50px 0 50px 30px;
+  text-align: center;
+}
+
+.belt-inner {
+  position: relative;
+  display: table;
+  height: 60px;
+  z-index: 1;
+}
+
+.belt > div {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+}
+
+.belt > div:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.belt > div:after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  border-radius: 50%;
+  z-index: 0;
+  background-color: #efefef;
+}
+
+.belt > div.blue {
+  background-color: #004ea1;
+}
+
+.belt > div.blue:before {
+  background-color: #004ea1;
+}
+
+.belt > div.blue p {
+  color: white;
+}
+
+.belt > div.white {
+  background-color: white;
+}
+
+.belt > div.white:before {
+  background-color: white;
+}
+
+.belt > div.red {
+  background-color: #e70012;
+}
+
+.belt > div.red:before {
+  background-color: #e70012;
+}
+
+.belt > div.red p {
+  color: white;
+}
+
+.belt > div p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+/* ==================
+  list
+================== */
+.list {
+  margin: 50px 0;
+}
+
+.list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.list__item {
+  float: left;
+}
+
+.list__item-title {
+  font-size: 2rem;
+  line-height: 2;
+  margin: 10px 0;
+}
+
+.list.column-2 .list__item {
+  width: 49%;
+}
+
+.list.column-2 .list__item:nth-child(2n) {
+  margin-left: 2%;
+}
+
+.list.column-4 .list__item {
+  width: 23.5%;
+}
+
+.list.column-4 .list__item:not(:nth-child(4n)) {
+  margin-right: 2%;
+}
+
+/* ==================
+  box
+================== */
+.yellow-box {
+  background-color: #fffdee;
+  border: 1px solid #b6b6b4;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* ==================
+  youtube
+================== */
+.youtube-area {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================
+  contact
+================== */
+.contact {
+  background-color: white;
+  border: 1px solid #dadada;
+}
+
+.contact .row:not(:first-child) {
+  border-top: 1px solid #dadada;
+}
+
+.contact-title, .contact-input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contact-title {
+  width: 39%;
+  padding: 15px 20px;
+}
+
+.contact-title.required p:after {
+  content: "必須";
+  color: #e70012;
+  margin-left: 5px;
+}
+
+.contact-input {
+  width: 60%;
+  padding: 12px 30px;
+  border-left: 1px solid #dadada;
+}
+
+.contact-input input,
+.contact-input textarea {
+  width: 80%;
+  height: 30px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  background: #efefef;
+  padding: 0 7px;
+  font-size: 1.4rem;
+}
+
+.contact-input input.tel,
+.contact-input textarea.tel {
+  width: 20%;
+}
+
+.contact-input textarea {
+  width: 90%;
+  height: 120px;
+  padding: 4px 8px;
+}
+
+p.caution {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.quote {
+  margin: 0 10px;
+  font-size: 2rem;
+  color: #b6b6b4;
+}
+
+.submit-btn {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 2rem;
+  padding: 5px;
+  background: black;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* ==================
+  faq
+================== */
+/* ==================
+  company
+================== */
+.logo {
+  width: 240px;
+  margin: auto;
+}
+
+.company-info-title {
+  line-height: 1.4 !important;
+  font-size: 1.4rem !important;
+}
+
+.company-info-title span.x-large {
+  font-size: 2.5rem !important;
+}
+
+.company-info-text {
+  line-height: 1.4 !important;
+  font-size: 1rem !important;
+}
+
+.fb {
+  text-align: center;
+  margin: 10px 0 30px;
+  font-size: 2rem;
+}
+
+.fb a {
+  color: #385692;
+}
+
+/* ==================
+  footer
+================== */
+.footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer i {
+  margin-right: 5px;
+}
+
+.copy {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 780px) {
+  /* ==================
+    hover
+================== */
+  .fade-hover, .btn {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .fade-hover:hover, .btn:hover {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  /* ==================
+    tb
+
+    index
+        - btn
+================== */
+}
+
+@media screen and (max-width: 480px) {
+  /* ==================
+    sp
+
+    index
+        - btn
+================== */
+}
