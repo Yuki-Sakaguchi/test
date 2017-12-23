@@ -1,0 +1,182 @@
+/* ==================
+  format
+    共通のスタイル
+
+  INDEX
+    - elm
+    - font
+    - margin, padding
+    - layout
+================== */
+
+/* ==================
+  elm
+================== */
+// PCのみで表示
+.pc-elm {
+  display: block;
+
+  &.i {
+    display: inline;
+  }
+
+  &.t {
+    display: table;
+  }
+
+  @include mq-s() {
+    display: none !important;
+  }
+}
+
+// SPのみで表示
+.sp-elm {
+  display: none !important;
+
+  @include mq-s() {
+    display: display;
+
+    &.i {
+      display: inline;
+    }
+  
+    &.t {
+      display: table;
+    }
+  }
+}
+
+
+/* ==================
+  font
+================== */
+.f-jp {
+  font-family: $JP_FONT_FAMILY !important;
+}
+
+.f-en {
+  font-family: $EN_FONT_FAMILY !important;
+}
+
+.f-xlarge {
+  font-size: 1.4em !important;
+}
+
+.f-large {
+  font-size: 1.2em !important;
+}
+
+.f-small {
+  font-size: 0.8em !important;
+}
+
+.f-xsmall {
+  font-size: 0.6em !important;
+}
+
+.f-black {
+  color: $C_BLACK !important;
+}
+
+.f-white {
+  color: $C_WHITE !important;
+}
+
+.f-gray {
+  color: $C_GRAY !important;
+}
+
+.f-red {
+  color: $C_RED !important;
+}
+
+.f-blue {
+  color: $C_BLUE !important;
+}
+
+.f-yellow {
+  color: $C_YELLOW !important;
+}
+
+.f-green {
+  color: $C_GREEN !important;
+}
+
+.f-bold {
+  font-weight: bold !important;
+}
+
+.f-italic {
+  font-style: italic !important;
+}
+
+
+/* ==================
+  margin, padding
+================== */
+// ０〜120まで5px刻み
+@for $i from 0 through 24 {
+  $tmp: $i*5;
+
+  // margin
+  .mt-#{$tmp} {
+    margin-top: #{$tmp}px !important;
+  }
+
+  .mr-#{$tmp} {
+    margin-right: #{$tmp}px !important;
+  }
+
+  .mb-#{$tmp} {
+    margin-bottom: #{$tmp}px !important;
+  }
+
+  .ml-#{$tmp} {
+    margin-left: #{$tmp}px !important;
+  }
+
+  // padding
+  .pt-#{$tmp} {
+    padding-top: #{$tmp}px !important;
+  }
+
+  .pr-#{$tmp} {
+    padding-right: #{$tmp}px !important;
+  }
+
+  .pb-#{$tmp} {
+    padding-bottom: #{$tmp}px !important;
+  }
+
+  .pl-#{$tmp} {
+    padding-left: #{$tmp}px !important;
+  }
+}
+
+
+/* ==================
+  layout
+================== */
+.al-c {
+  text-align: center !important;
+}
+
+.al-r {
+  text-align: right !important;
+}
+
+.al-l {
+  text-align: left !important;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.cf {
+  @include clearfix();
+}

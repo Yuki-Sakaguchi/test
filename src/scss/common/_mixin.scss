@@ -1,0 +1,40 @@
+// ==================
+//    mixin
+// ==================
+
+// Lサイズのメディアクエリ
+@mixin mq-l() {
+  @include media-query($BP_L) {
+    @content;
+  }
+}
+
+// Mサイズのメディアクエリ
+@mixin mq-m() {
+  @include media-query($BP_M) {
+    @content;
+  }
+}
+
+// Sサイズのメディアクエリ
+@mixin mq-s() {
+  @include media-query($BP_S) {
+    @content;
+  }
+}
+
+//メディアクエリの設定
+@mixin media-query($BP) {
+  @media screen and (max-width: $BP) {
+      @content;
+  }
+}
+
+// floatの解除
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

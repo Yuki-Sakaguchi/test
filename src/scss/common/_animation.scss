@@ -1,0 +1,14 @@
+/* ==================
+  animation
+    keyframesでのアニメーション
+================== */
+
+// スケールを大きくする
+@keyframes scale {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+}

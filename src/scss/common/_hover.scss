@@ -1,0 +1,33 @@
+/* ==================
+  hover
+    ホバー用のスタイル
+
+  INDEX
+    - opacity
+    - translateY
+================== */
+
+/* ==================
+  opacity
+================== */
+.h-opa {
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+/* ==================
+  translateY
+================== */
+.h-tfY {
+  transform: translateY(0);
+  transition: transform 0.3s;
+  
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
