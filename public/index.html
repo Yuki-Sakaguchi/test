@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-quiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, follow">
         <title>タイトル</title>
         <meta name="keywords" content="きーわーど,キーワード,keywords">
         <meta name="description" content="説明文">
@@ -24,6 +25,11 @@
     </head>
     <body>
         <haeder class="header">
+            <h1 class="main-title">
+                サーキット生まれのガードマン!!<br>
+                次はあなたの業界で
+            </h1>
+            <div class="toggle-menu sp-elm"><span></span><span></span><span></span></div>
             <nav class="global-menu">
                 <div class="inner">
                     <ul class="global-menu-list">
@@ -44,10 +50,11 @@
                                 <p class="menu-sub">パンフレット</p></a></li>
                     </ul>
                 </div>
+                <div class="close-btn sp-elm"></div>
             </nav>
         </haeder>
         <div class="wrapper">
-            <section class="section">
+            <section class="section" id="about">
                 <div class="inner">
                     <hgoup class="section-title">
                         <h2>ABOUT TECPRO BARRIERS</h2>
@@ -78,14 +85,14 @@
                         </div>
                     </div>
                     <ul class="list column-2">
-                        <li class="list__item"><img class="list__item-img" src="./images/sample01.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/1-1.png">
                             <h4 class="list__item-title f-jp">高い安全性と信頼性を実現</h4>
                             <p class="list__item-text">
                                 TECPRO BARRIERSは、耐久性の強い弾性プラスチックを強度の強いナイロンストラップでつなげる「連結式バリア」です。
                                 万一の事故が起きても、連結されたTECPRO BARRIERSが衝撃を吸収し、衝突による破損や破裂を軽減します。
                             </p>
                         </li>
-                        <li class="list__item"><img class="list__item-img" src="./images/sample01.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/1-2.png">
                             <h4 class="list__item-title f-jp">様々シーンで活躍する高い汎用性</h4>
                             <p class="list__item-text">
                                 コーナー取りも簡単にできるためイベントの動線作りにも役立ちます。
@@ -97,27 +104,107 @@
                     </ul>
                     <p class="al-c yellow-box large f-jp">メニューからバンプレットがダウンロードできます。</p>
                     <ul class="list column-4">
-                        <li class="list__item"><img class="list__item-img" src="./images/sample02.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/2-1.png">
                             <p class="list__item-text">学校行事や地位のイベントに！</p>
                         </li>
-                        <li class="list__item"><img class="list__item-img" src="./images/sample02.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/2-2.png">
                             <p class="list__item-text">マラソン大会などの動線作りに</p>
                         </li>
-                        <li class="list__item"><img class="list__item-img" src="./images/sample02.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/2-3.png">
                             <p class="list__item-text">車両を用いる場の安全対策に</p>
                         </li>
-                        <li class="list__item"><img class="list__item-img" src="./images/sample02.png">
+                        <li class="list__item"><img class="list__item-img" src="./images/2-4.png">
                             <p class="list__item-text">設置は弊社にお任せください！</p>
                         </li>
                     </ul>
                 </div>
                 <div class="youtube-area">
-                    <div class="youtube">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1HzSiBYWgnQ?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                    <div class="inner">
+                        <div class="youtube">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/NdXeNu53TKg?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-list" id="price-list">
+                    <div class="inner">
+                        <hgoup class="section-title">
+                            <h2>PRICE LIST</h2>
+                            <h3>プライスリスト</h3>
+                        </hgoup>
+                        <div class="cf">
+                            <div class="left-box"><img src="./images/barrier2_sizes.png"></div>
+                            <div class="right-box">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">購入</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>料金</th>
+                                            <td>15,000円</td>
+                                        </tr>
+                                        <tr>
+                                            <th>カラー</th>
+                                            <td>５色（赤、青、緑、黄色、白）</td>
+                                        </tr>
+                                        <tr>
+                                            <th>サイズ</th>
+                                            <td>
+                                                ４種類（mm）<br>
+                                                1.600x300x250
+                                                2.1000x500x380<br>
+                                                3.1200x800x400
+                                                4.1500x1200x600
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">レンタル</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>料金</th>
+                                            <td>
+                                                ３日間　９００/個
+                                                ４日以降　１００円加算/日
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>カラー</th>
+                                            <td>２種類（「赤x白」,「青x白」）</td>
+                                        </tr>
+                                        <tr>
+                                            <th>サイズ</th>
+                                            <td>１種類（mm）　1.1000x500x380</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="cuption">
+                                    ※連結ベルト、金具は別途料金（個数により変動します）<br>
+                                    ※運賃・施工量等はご相談ください。<br>
+                                    ※４トン車（約135m分）、１０トン車で300個（約270m分）の設置が可能です。
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="section">
+            <section class="section bg-w" id="blog">
+                <div class="inner">
+                    <hgoup class="section-title">
+                        <h2>BLOG</h2>
+                        <h3>ブログ</h3>
+                    </hgoup>
+                    <ul class="list column-4" id="blog-list"></ul>
+                </div>
+            </section>
+            <section class="section" id="contact">
                 <div class="bg-img"></div>
                 <div class="inner">
                     <hgoup class="section-title">
@@ -127,7 +214,7 @@
                     <p class="al-c f-jp x-large">イベントのご相談、購入・レンタルのお見積り依頼等お気軽にお問い合わせください。</p>
                     <p class="al-c yellow-box mt-10 mb-30">
                         電話でのお問い合わせ
-                        <strong class="bold">TEL<span class="x-large">048-783-4040</span></strong>
+                        <strong class="bold">TEL<span class="x-large">048-783-4040</span></strong><br class="sp-elm">
                         （受付時間 平日9時〜17時)
                     </p>
                     <p class="al-c large bold mb-20">メールでのお問い合わせは下記のメールフォームよりお願いいたします。</p>
@@ -136,14 +223,14 @@
                         フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう可能性がございます。<br>
                         迷惑メールフォルダもご確認いただきますようお願いいたします。
                     </p>
-                    <form action="/" method="post">
+                    <form action="send.php" method="post">
                         <div class="contact">
                             <div class="row">
                                 <div class="contact-title required">
                                     <p>会社名（個人の方は個人と記入ください）</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="name">
                                 </div>
                             </div>
                             <div class="row">
@@ -151,7 +238,7 @@
                                     <p>ご担当者名</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="type">
                                 </div>
                             </div>
                             <div class="row">
@@ -159,7 +246,7 @@
                                     <p>メールアドレス</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="type">
                                     <p class="x-small caution">
                                         フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう
                                         可能性がございます。迷惑メールフォルダもご確認いただきますようお願い致します。
@@ -171,9 +258,9 @@
                                     <p>電場番号</p>
                                 </div>
                                 <div class="contact-input tel">
-                                    <input class="tel" name="type"><span class="quote">-</span>
-                                    <input class="tel" name="type"><span class="quote">-</span>
-                                    <input class="tel" name="type">
+                                    <input class="tel" type="input" name="type"><span class="quote">-</span>
+                                    <input class="tel" type="input" name="type"><span class="quote">-</span>
+                                    <input class="tel" type="input" name="type">
                                 </div>
                             </div>
                             <div class="row">
@@ -192,7 +279,7 @@
                                     <p>ご利用期間</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="type">
                                 </div>
                             </div>
                             <div class="row">
@@ -200,7 +287,7 @@
                                     <p>ご利用場所</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="type">
                                 </div>
                             </div>
                             <div class="row">
@@ -208,7 +295,7 @@
                                     <p>ご利用内容</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input name="type">
+                                    <input type="input" name="type">
                                 </div>
                             </div>
                             <div class="row">
@@ -224,15 +311,7 @@
                     </form>
                 </div>
             </section>
-            <section class="sectionbg-w">
-                <div class="inner">
-                    <hgoup class="section-title">
-                        <h2>FAQ</h2>
-                        <h3>よくある質問</h3>
-                    </hgoup>
-                </div>
-            </section>
-            <section class="section">
+            <section class="section" id="company">
                 <div class="inner">
                     <hgoup class="section-title">
                         <h2>COMPANY</h2>
@@ -251,6 +330,7 @@
             </section>
         </div>
         <footer class="footer"><small class="copy"><i class="fa fa-copyright"></i>BLOCCO 2018.</small></footer>
-        <script src="./js/bundle.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

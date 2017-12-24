@@ -9,10 +9,7 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     server = require('gulp-webserver'),
     imagemin = require('gulp-imagemin'),
-    imageminPngquant = require('imagemin-pngquant'),
-    webpack = require("webpack"),
-    webpackStream = require("webpack-stream"),
-    webpackConfig = require("./webpack.config");
+    imageminPngquant = require('imagemin-pngquant');
 
 
 // path
@@ -41,9 +38,15 @@ gulp.task('pug', function() {
 /**
  * webpack（jsのモジュール管理）
  */
-gulp.task('webpack', function() {
-    webpackStream(webpackConfig, webpack)
-    .pipe(gulp.dest(path.public + '/js/'));
+gulp.task('js', function() {
+  gulp.src(path.source + '/js/**/*.js')
+  .pipe(plumber({
+      errorHandler: function(err) {
+          console.log(err.messageFormatted);
+          return this.emit('end');
+      }
+  }))
+  .pipe(gulp.dest(path.public + '/js/'));
 });
 
 
@@ -119,7 +122,7 @@ gulp.task('webserver', function() {
  */
 gulp.task('watch', function() {
     gulp.watch(path.source + '/pug/**/*.pug', ['pug']);
-    gulp.watch(path.source + '/ts/**/*.ts', ['webpack']);
+    gulp.watch(path.source + '/js/**/*.js', ['js']);
     gulp.watch(path.source + '/scss/**/*.scss', ['scss']);
 });
 

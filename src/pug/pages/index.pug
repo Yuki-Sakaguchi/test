@@ -29,7 +29,7 @@ block body
   .wrapper
     
     //- about
-    section.section
+    section.section#about
       .inner
         
         hgoup.section-title
@@ -56,13 +56,13 @@ block body
 
         ul.list.column-2
           li.list__item
-            img.list__item-img(src="./images/sample01.png")
+            img.list__item-img(src="./images/1-1.png")
             h4.list__item-title.f-jp 高い安全性と信頼性を実現
             p.list__item-text
               |TECPRO BARRIERSは、耐久性の強い弾性プラスチックを強度の強いナイロンストラップでつなげる「連結式バリア」です。
               |万一の事故が起きても、連結されたTECPRO BARRIERSが衝撃を吸収し、衝突による破損や破裂を軽減します。
           li.list__item
-            img.list__item-img(src="./images/sample01.png")
+            img.list__item-img(src="./images/1-2.png")
             h4.list__item-title.f-jp 様々シーンで活躍する高い汎用性
             p.list__item-text
               |コーナー取りも簡単にできるためイベントの動線作りにも役立ちます。
@@ -74,24 +74,89 @@ block body
 
         ul.list.column-4
           li.list__item
-            img.list__item-img(src="./images/sample02.png")
+            img.list__item-img(src="./images/2-1.png")
             p.list__item-text 学校行事や地位のイベントに！
           li.list__item
-            img.list__item-img(src="./images/sample02.png")
+            img.list__item-img(src="./images/2-2.png")
             p.list__item-text マラソン大会などの動線作りに
           li.list__item
-            img.list__item-img(src="./images/sample02.png")
+            img.list__item-img(src="./images/2-3.png")
             p.list__item-text 車両を用いる場の安全対策に
           li.list__item
-            img.list__item-img(src="./images/sample02.png")
+            img.list__item-img(src="./images/2-4.png")
             p.list__item-text 設置は弊社にお任せください！
 
       .youtube-area
+        .inner
           .youtube
-            iframe(width="560" height="315" src="https://www.youtube.com/embed/1HzSiBYWgnQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/NdXeNu53TKg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+      
+      .price-list#price-list
+        .inner
+          hgoup.section-title
+            h2 PRICE LIST
+            h3 プライスリスト
+          
+          .cf
+            .left-box
+              img(src="./images/barrier2_sizes.png")
+
+            .right-box
+              table.price-table
+                thead
+                  tr
+                    th(colspan="2") 購入
+                tbody
+                  tr
+                    th 料金
+                    td 15,000円
+                  tr
+                    th カラー
+                    td ５色（赤、青、緑、黄色、白）
+                  tr
+                    th サイズ
+                    td
+                      |４種類（mm）<br>
+                      |1.600x300x250
+                      |2.1000x500x380<br>
+                      |3.1200x800x400
+                      |4.1500x1200x600
+                
+              table.price-table
+                thead
+                  tr
+                    th(colspan="2") レンタル
+                tbody
+                  tr
+                    th 料金
+                    td
+                      |３日間　９００/個
+                      |４日以降　１００円加算/日
+                  tr
+                    th カラー
+                    td ２種類（「赤x白」,「青x白」）
+                  tr
+                    th サイズ
+                    td １種類（mm）　1.1000x500x380
+                
+              p.cuption
+                |※連結ベルト、金具は別途料金（個数により変動します）<br>
+                |※運賃・施工量等はご相談ください。<br>
+                |※４トン車（約135m分）、１０トン車で300個（約270m分）の設置が可能です。
+
+    //- BLOG
+    section.section.bg-w#blog
+      .inner
+        hgoup.section-title
+          h2 BLOG
+          h3 ブログ
+        
+        ul.list.column-4#blog-list
+
+
 
     //- contact
-    section.section
+    section.section#contact
       .bg-img
       .inner
 
@@ -104,7 +169,7 @@ block body
 
           p.al-c.yellow-box.mt-10.mb-30
             |電話でのお問い合わせ
-            |<strong class="bold">TEL<span class="x-large">048-783-4040</span></strong>
+            |<strong class="bold">TEL<span class="x-large">048-783-4040</span></strong><br class="sp-elm">
             |（受付時間 平日9時〜17時)
           
           p.al-c.large.bold.mb-20
@@ -115,23 +180,23 @@ block body
             |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう可能性がございます。<br>
             |迷惑メールフォルダもご確認いただきますようお願いいたします。
           
-          form(action="/", method="post")
+          form(action="send.php", method="post")
             .contact
               .row
                 .contact-title.required
                   p 会社名（個人の方は個人と記入ください）
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="name")
               .row
                 .contact-title.required
                   p ご担当者名
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="type")
               .row
                 .contact-title.required
                   p メールアドレス
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="type")
                   p.x-small.caution
                     |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう
                     |可能性がございます。迷惑メールフォルダもご確認いただきますようお願い致します。
@@ -139,11 +204,11 @@ block body
                 .contact-title.required
                   p 電場番号
                 .contact-input.tel
-                  input.tel(name="type")
+                  input.tel(type="input", name="type")
                   span.quote -
-                  input.tel(name="type")
+                  input.tel(type="input", name="type")
                   span.quote -
-                  input.tel(name="type")
+                  input.tel(type="input", name="type")
               .row
                 .contact-title.required
                   p お問い合わせ内容
@@ -157,17 +222,17 @@ block body
                 .contact-title.required
                   p ご利用期間
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="type")
               .row
                 .contact-title.required
                   p ご利用場所
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="type")
               .row
                 .contact-title.required
                   p ご利用内容
                 .contact-input
-                  input(name="type")
+                  input(type="input", name="type")
               .row
                 .contact-title.required
                   p その他
@@ -178,15 +243,15 @@ block body
 
 
     //- faq
-    section.sectionbg-w
-      .inner
+    //- section.section.bg-w#faq
+    //-   .inner
 
-          hgoup.section-title
-            h2 FAQ
-            h3 よくある質問
+    //-       hgoup.section-title
+    //-         h2 FAQ
+    //-         h3 よくある質問
 
     //- company
-    section.section
+    section.section#company
       .inner
 
           hgoup.section-title

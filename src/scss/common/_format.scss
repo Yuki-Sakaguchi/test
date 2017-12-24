@@ -31,17 +31,17 @@
 
 // SPのみで表示
 .sp-elm {
-  display: none !important;
+  display: none;
 
   @include mq-s() {
-    display: display;
+    display: block !important;
 
     &.i {
-      display: inline;
+      display: inline !important;
     }
   
     &.t {
-      display: table;
+      display: table !important;
     }
   }
 }

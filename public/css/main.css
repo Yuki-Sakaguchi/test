@@ -164,18 +164,18 @@ textarea:focus {
 }
 
 .sp-elm {
-  display: none !important;
+  display: none;
 }
 
 @media screen and (max-width: 480px) {
   .sp-elm {
-    display: display;
+    display: block !important;
   }
   .sp-elm.i {
-    display: inline;
+    display: inline !important;
   }
   .sp-elm.t {
-    display: table;
+    display: table !important;
   }
 }
 
@@ -1131,19 +1131,12 @@ textarea:focus {
   max-width: 960px;
   display: block;
   margin: auto;
-}
-
-.pc-elm {
-  display: block;
-}
-
-.sp-elm {
-  display: none;
+  padding: 0 20px;
 }
 
 /* ==================
-    section
-  ================== */
+  section
+================== */
 .section {
   position: relative;
   background-color: #efefef;
@@ -1159,14 +1152,14 @@ textarea:focus {
   top: 0;
   left: 0;
   right: 0;
-  background-image: url("../images/top.png");
+  background-image: url("../images/back1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   width: 100%;
   height: 100%;
   margin: auto;
-  opacity: 0.1;
+  opacity: 1;
 }
 
 .section-title {
@@ -1192,9 +1185,39 @@ textarea:focus {
   color: #444;
 }
 
+.left-box,
+.right-box {
+  float: left;
+  width: 50%;
+}
+
+.price-table {
+  width: 100%;
+  background: white;
+  margin: 0 10px 20px;
+  border-collapse: collapse;
+  border: 1px solid black;
+  line-height: 1.6;
+}
+
+.price-table th,
+.price-table td {
+  vertical-align: middle;
+  height: 40px;
+  padding: 0 10px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.price-table thead th {
+  text-align: left;
+  background: black;
+  color: white;
+}
+
 /* ==================
-    hader
-  ================== */
+  hader
+================== */
 .header {
   position: relative;
   display: block;
@@ -1206,9 +1229,49 @@ textarea:focus {
   background-position: center top;
 }
 
+@media screen and (max-width: 780px) {
+  .header {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: 300px;
+  }
+}
+
+.main-title {
+  color: white;
+  font-size: 4rem;
+  line-height: 1.2;
+  background: linear-gradient(45deg, rgba(251, 46, 0, 0.85), rgba(255, 59, 0, 0.02));
+  padding: 20px 50px;
+  position: absolute;
+  width: 100%;
+  top: 10vw;
+}
+
+@media screen and (max-width: 780px) {
+  .main-title {
+    text-align: center;
+    font-size: 3rem;
+    top: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-title {
+    text-align: center;
+    font-size: 2.3rem;
+    top: 110px;
+    padding: 20px 0;
+  }
+}
+
 /* ==================
-    global menu
-  ================== */
+  global menu
+================== */
 .global-menu {
   position: absolute;
   bottom: 0;
@@ -1216,6 +1279,57 @@ textarea:focus {
   left: 0;
   margin: auto;
   background-color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .global-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 50vw;
+    background: white;
+    z-index: 9999;
+    transition: transform 0.5s;
+    transform: translateX(100%);
+  }
+  .global-menu .inner {
+    margin-top: 24vh;
+  }
+  .global-menu.js-active {
+    transform: translateX(0);
+  }
+}
+
+.global-menu .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+}
+
+.global-menu .close-btn:before, .global-menu .close-btn:after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+}
+
+.global-menu .close-btn:before {
+  transform: rotate(45deg);
+}
+
+.global-menu .close-btn:after {
+  transform: rotate(-45deg);
 }
 
 .global-menu-list:after {
@@ -1230,6 +1344,13 @@ textarea:focus {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .global-menu-list__item {
+    float: none;
+    width: 100%;
+  }
+}
+
 .global-menu-list__item a {
   display: block;
   padding: 20px 0;
@@ -1242,11 +1363,49 @@ textarea:focus {
   font-weight: bold;
 }
 
+.toggle-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  transition: all .4s;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+.toggle-menu span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 26px;
+  height: 4px;
+  background-color: black;
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.toggle-menu span:nth-of-type(1) {
+  top: 14px;
+}
+
+.toggle-menu span:nth-of-type(2) {
+  top: 23px;
+}
+
+.toggle-menu span:nth-of-type(3) {
+  bottom: 14px;
+}
+
 /* ==================
-    belt 
-  ================== */
+  belt 
+================== */
 .belt {
-  margin: 50px 0 50px 30px;
+  margin: 50px 0 50px 10px;
   text-align: center;
 }
 
@@ -1257,10 +1416,23 @@ textarea:focus {
   z-index: 1;
 }
 
+@media screen and (max-width: 780px) {
+  .belt-inner {
+    width: 90%;
+  }
+}
+
 .belt > div {
   position: relative;
   display: inline-block;
   width: 20%;
+}
+
+@media screen and (max-width: 780px) {
+  .belt > div {
+    width: 80%;
+    margin-bottom: 10px;
+  }
 }
 
 .belt > div:before {
@@ -1323,13 +1495,14 @@ textarea:focus {
 .belt > div p {
   display: table-cell;
   vertical-align: middle;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  padding-left: 10px;
 }
 
 /* ==================
-    list
-  ================== */
+  list
+================== */
 .list {
   margin: 50px 0;
 }
@@ -1344,10 +1517,33 @@ textarea:focus {
   float: left;
 }
 
+.list__item a {
+  display: block;
+  color: black;
+}
+
+.list__item-img-bg {
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+}
+
 .list__item-title {
   font-size: 2rem;
   line-height: 2;
   margin: 10px 0;
+}
+
+.list__item-time {
+  display: block;
+  margin: 10px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.list__item-blogtitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .list.column-2 .list__item {
@@ -1358,6 +1554,16 @@ textarea:focus {
   margin-left: 2%;
 }
 
+@media screen and (max-width: 480px) {
+  .list.column-2 .list__item {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .list.column-2 .list__item:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+
 .list.column-4 .list__item {
   width: 23.5%;
 }
@@ -1366,9 +1572,22 @@ textarea:focus {
   margin-right: 2%;
 }
 
+@media screen and (max-width: 480px) {
+  .list.column-4 .list__item {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+  .list.column-4 .list__item:not(:nth-child(4n)) {
+    margin-right: 0;
+  }
+  .list.column-4 .list__item:nth-child(2n) {
+    margin-left: 2%;
+  }
+}
+
 /* ==================
-    box
-  ================== */
+  box
+================== */
 .yellow-box {
   background-color: #fffdee;
   border: 1px solid #b6b6b4;
@@ -1378,8 +1597,8 @@ textarea:focus {
 }
 
 /* ==================
-    youtube
-  ================== */
+  youtube
+================== */
 .youtube-area {
   max-width: 600px;
   margin: 50px auto;
@@ -1402,8 +1621,8 @@ textarea:focus {
 }
 
 /* ==================
-    contact
-  ================== */
+  contact
+================== */
 .contact {
   background-color: white;
   border: 1px solid #dadada;
@@ -1423,6 +1642,12 @@ textarea:focus {
   padding: 15px 20px;
 }
 
+@media screen and (max-width: 780px) {
+  .contact-title {
+    width: 100%;
+  }
+}
+
 .contact-title.required p:after {
   content: "必須";
   color: #e70012;
@@ -1433,6 +1658,14 @@ textarea:focus {
   width: 60%;
   padding: 12px 30px;
   border-left: 1px solid #dadada;
+}
+
+@media screen and (max-width: 780px) {
+  .contact-input {
+    width: 100%;
+    padding: 0px 30px 12px;
+    border: none;
+  }
 }
 
 .contact-input input,
@@ -1479,11 +1712,11 @@ p.caution {
 }
 
 /* ==================
-    faq
-  ================== */
+  faq
+================== */
 /* ==================
-    company
-  ================== */
+  company
+================== */
 .logo {
   width: 240px;
   margin: auto;
@@ -1514,8 +1747,8 @@ p.caution {
 }
 
 /* ==================
-    footer
-  ================== */
+  footer
+================== */
 .footer {
   background: black;
   color: white;
