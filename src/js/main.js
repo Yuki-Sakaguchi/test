@@ -28,73 +28,16 @@ $(function() {
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
     $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
   });
 });
 
 
-// blog
-// $(function() {
-//   var $blogArea = $('#blog');
-//   var $blog = $('#blog-list');
-
-//   $.ajax({
-//     //はてなrssファイルを読み込む
-//     //ブログのアドレスの最後にrssをつける
-    
-//     //url: 'http://blocco.hatenablog.com/rss',
-//     url: 'http://noriyasu-katano.hatenablog.com/rss',
-
-//     success: function(data) {
-//       //はてなrssの読み込み
-//       // var rss_url = 'http://blocco.hatenablog.com/rss';
-//       var rss_url = 'http://noriyasu-katano.hatenablog.com/rss';
-
-//       var htmlstr = "";
-
-//       //アイテムの調整
-//       $.get(rss_url, function(data) {
-//           var $item = $(data).find("item");
-//           if (!$item.length) {
-//             // 記事が取得できなければブログエリアを削除
-//             $blogArea.remove();
-//             return false;
-//           }
-
-//           $(data).find("item").each(function (i) {
-//             var el = $(this);
-//             var elimg = el.find("enclosure").attr("url");
-//             var eltime = new Date(el.find("pubDate").text());
-
-//             htmlstr += '<li class="list__item">';
-//             htmlstr += '    <a href="' + el.find("link").text() + '" title="' + el.find("title").text() + '" target="_blank">';
-//             htmlstr += '        <div class="list__item-img-bg"  style="background-image: url(' + elimg + ')"></div>';
-//             htmlstr += '        <time class="list__item-time">' + eltime.getFullYear() + '/' + (eltime.getMonth() + 1) + '/' + eltime.getDate() + '</time>';
-//             htmlstr += '        <p class="list__item-blogtitle">' + el.find("title").text() + '</p>';
-//             htmlstr += '    </a>'
-//             htmlstr += '</li>';
-
-//             if(i === 3) { // 表示件数の設定
-//               return false;
-//             };
-//           });
-
-//         //footer前に挿入する
-//         $blog.append(htmlstr);
-//       });
-//     },
-
-//     error: function() {
-//       // 通信失敗の場合はブログエリアを削除
-//       $blogArea.remove();
-//       return false;
-//     }
-//   });
-// });
-
-
+// ブログ
 $(function() {
    var $blogArea = $('#blog');
    var $blog = $('#blog-list');
+   var $blogBtn = $("#blog-btn");
 
 	$.ajax({
 		url: 'rss.php',
@@ -108,7 +51,7 @@ $(function() {
 
       var $item = $(xml).find('item');
       if (!$item.length) {
-        $blogArea.remove();
+        none();
         return false;
       }
 
@@ -147,9 +90,72 @@ $(function() {
     },
 
     error: function() {
-      // 通信失敗の場合はブログエリアを削除
-      $blogArea.remove();
+      none();
       return false;
     }
   });
+
+  function none() {
+    $blogArea.remove();
+      $blogBtn.remove();
+      $('.global-menu-list__item').css('width', (100 / $('.global-menu-list__item').length) + "%");
+      return false;
+  }
+});
+
+
+// メール送信
+$(function() {
+  $('#contact-form').submit(function(event) {
+    // HTMLでの送信をキャンセル
+    event.preventDefault();
+ 
+    // 操作対象のフォーム要素を取得
+    var $form = $(this);
+ 
+    // 送信ボタンを取得
+    var $button = $form.find('button');
+ 
+    // 送信
+    $.ajax({
+        url: $form.attr('action'),
+        type: $form.attr('method'),
+        data: $form.serialize(),
+        timeout: 10000,  // 単位はミリ秒
+ 
+        // 送信前
+        beforeSend: function(xhr, settings) {
+            // ボタンを無効化し、二重送信を防止
+            $button.attr('disabled', true);
+        },
+        // 応答後
+        complete: function(xhr, textStatus) {
+            // ボタンを有効化し、再送信を許可
+            $button.attr('disabled', false);
+        },
+ 
+        // 通信成功時の処理
+        success: function(result, textStatus, xhr) {
+            // 入力値を初期化
+            $form[0].reset();
+            result = JSON.parse(result);
+            console.log(result[0]);
+            console.log(result[0] == 'error');
+            if (result[0] == 'error') {
+              swal('送信に失敗しました。')
+              return false;
+            } else {
+              swal('メールを送信いたしました。')
+              return false;
+            }
+
+        },
+ 
+        // 通信失敗時の処理
+        error: function(xhr, textStatus, error) {
+          $form[0].reset();
+          swal('送信に失敗しました。')
+        }
+    });
+});
 });

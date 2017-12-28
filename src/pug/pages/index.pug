@@ -66,7 +66,7 @@ block body
             h4.list__item-title.f-jp 様々シーンで活躍する高い汎用性
             p.list__item-text
               |コーナー取りも簡単にできるためイベントの動線作りにも役立ちます。
-              |ご購入の場合は、豊富な色とサイズからお選びいただけ、ご希望のロゴも入れられます。<br>
+              |ご購入の場合は、豊富な色とサイズからお選び頂けます。<br>
               |レンタルは、赤 x 白 or 青 x 白の２パターンですが、ステッカーやカバーをかけるなど
               |装飾が可能であり、現場にあった雰囲気を作ることができます。
 
@@ -109,37 +109,37 @@ block body
                 tbody
                   tr
                     th 料金
-                    td 15,000円
+                    td 15,000円/個
                   tr
                     th カラー
                     td ５色（赤、青、緑、黄色、白）
                   tr
                     th サイズ
-                    td
+                    td.table-bg
                       |４種類（mm）<br>
-                      |1.600x300x250
-                      |2.1000x500x380<br>
-                      |3.1200x800x400
-                      |4.1500x1200x600
+                      |① 600x300x250
+                      |② 1000x500x380<br>
+                      |③ 1200x800x400
+                      |④ 1500x1200x600
                 
-              table.price-table
+              table.price-table.mb-5
                 thead
                   tr
-                    th(colspan="2") レンタル
+                    th.bg-g(colspan="2") レンタル
                 tbody
                   tr
                     th 料金
                     td
-                      |３日間　９００/個
-                      |４日以降　１００円加算/日
+                      |３日間　900/個<br>
+                      |４日以降　100円加算/日
                   tr
                     th カラー
                     td ２種類（「赤x白」,「青x白」）
                   tr
                     th サイズ
-                    td １種類（mm）　1.1000x500x380
+                    td １種類（mm）　① 1000x500x380
                 
-              p.cuption
+              p.price-caution
                 |※連結ベルト、金具は別途料金（個数により変動します）<br>
                 |※運賃・施工量等はご相談ください。<br>
                 |※４トン車（約135m分）、１０トン車で300個（約270m分）の設置が可能です。
@@ -180,23 +180,23 @@ block body
             |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう可能性がございます。<br>
             |迷惑メールフォルダもご確認いただきますようお願いいたします。
           
-          form(action="send.php", method="post")
+          form#contact-form(action="send.php", method="post")
             .contact
               .row
                 .contact-title.required
                   p 会社名（個人の方は個人と記入ください）
                 .contact-input
-                  input(type="input", name="name")
+                  input(type="input", name="company-name", required)
               .row
                 .contact-title.required
                   p ご担当者名
                 .contact-input
-                  input(type="input", name="type")
+                  input(type="input", name="name", required)
               .row
                 .contact-title.required
                   p メールアドレス
                 .contact-input
-                  input(type="input", name="type")
+                  input(type="email", name="email", required)
                   p.x-small.caution
                     |フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう
                     |可能性がございます。迷惑メールフォルダもご確認いただきますようお願い致します。
@@ -204,42 +204,42 @@ block body
                 .contact-title.required
                   p 電場番号
                 .contact-input.tel
-                  input.tel(type="input", name="type")
+                  input.tel(type="input", name="tel1", required, pattern="[0-9]{3,4}")
                   span.quote -
-                  input.tel(type="input", name="type")
+                  input.tel(type="input", name="tel2", required, pattern="[0-9]{3,4}")
                   span.quote -
-                  input.tel(type="input", name="type")
+                  input.tel(type="input", name="te3", required, pattern="[0-9]{3,4}")
               .row
                 .contact-title.required
                   p お問い合わせ内容
                 .contact-input
-                  textarea
+                  textarea(name="contact", required)
               
             p.c-red.mt-20.mb-10 レンタルについてのお問い合わせの方は、以下の質問にもお答えください。
 
             .contact
               .row
-                .contact-title.required
+                .contact-title
                   p ご利用期間
                 .contact-input
-                  input(type="input", name="type")
+                  input(type="input", name="period")
               .row
-                .contact-title.required
+                .contact-title
                   p ご利用場所
                 .contact-input
-                  input(type="input", name="type")
+                  input(type="input", name="place")
               .row
-                .contact-title.required
+                .contact-title
                   p ご利用内容
                 .contact-input
-                  input(type="input", name="type")
+                  input(type="input", name="contents")
               .row
-                .contact-title.required
+                .contact-title
                   p その他
                 .contact-input
-                  textarea
+                  textarea(name="other")
 
-            input.submit-btn(type="submit", value="送信確認")
+            button.submit-btn 送信
 
 
     //- faq
@@ -271,6 +271,6 @@ block body
               |TEL048-783-4040　FAX048-669-8126　MAIL info@blocco-ss.com
 
             .fb
-              a(href="#")
+              a(href="https://www.facebook.com/pg/BLOCCO-135400390488688/reviews/?ref=page_internal", target="_blank")
                 i.fa.fa-facebook-official
             

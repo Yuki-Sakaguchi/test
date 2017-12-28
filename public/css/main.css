@@ -1191,6 +1191,14 @@ textarea:focus {
   width: 50%;
 }
 
+@media screen and (max-width: 480px) {
+  .left-box,
+  .right-box {
+    float: none;
+    width: 100%;
+  }
+}
+
 .price-table {
   width: 100%;
   background: white;
@@ -1198,6 +1206,12 @@ textarea:focus {
   border-collapse: collapse;
   border: 1px solid black;
   line-height: 1.6;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table {
+    margin: 20px 0;
+  }
 }
 
 .price-table th,
@@ -1213,6 +1227,51 @@ textarea:focus {
   text-align: left;
   background: black;
   color: white;
+  font-size: 1.6rem;
+}
+
+.price-table thead th.bg-g {
+  background: #aaa;
+}
+
+.price-table tbody th {
+  font-size: 1.2rem;
+}
+
+.price-table tbody td {
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.price-table tbody td.table-bg {
+  position: relative;
+}
+
+.price-table tbody td.table-bg:before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 57px;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url("../images/price_red.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 480px) {
+  .price-table tbody td.table-bg {
+    width: auto;
+  }
+  .price-table tbody td.table-bg:before {
+    display: none;
+  }
+}
+
+.price-caution {
+  margin: 0 10px;
 }
 
 /* ==================
@@ -1339,15 +1398,31 @@ textarea:focus {
 }
 
 .global-menu-list__item {
+  position: relative;
   float: left;
   width: 20%;
   text-align: center;
 }
 
+.global-menu-list__item:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.3s;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+
+.global-menu-list__item:hover:before {
+  height: 3px;
+}
+
 @media screen and (max-width: 480px) {
   .global-menu-list__item {
     float: none;
-    width: 100%;
+    width: 100% !important;
   }
 }
 
@@ -1709,6 +1784,12 @@ p.caution {
   background: black;
   color: white;
   letter-spacing: 2px;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
 }
 
 /* ==================
@@ -1762,4 +1843,40 @@ p.caution {
 
 .copy {
   font-size: 1.4rem;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.top-btn span {
+  color: white;
+  text-align: center;
+  display: block;
+  top: 10px;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.top-btn:before {
+  content: "";
+  border-style: solid;
+  border-width: 3px;
+  width: 10px;
+  height: 10px;
+  border-color: white white transparent transparent;
+  display: block;
+  top: 30px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transform: rotate(-45deg);
 }

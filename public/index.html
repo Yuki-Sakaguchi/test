@@ -21,6 +21,7 @@
         <link rel="shortcut icon" href="./images/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css">
+        <link rel="stylesheet" href="./css/sweetalert2.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -33,19 +34,19 @@
             <nav class="global-menu">
                 <div class="inner">
                     <ul class="global-menu-list">
-                        <li class="global-menu-list__item"><a href="#about">
+                        <li class="global-menu-list__item" id="about-btn"><a href="#about">
                                 <p class="menu-title">ABOUT</p>
                                 <p class="menu-sub">製品について</p></a></li>
-                        <li class="global-menu-list__item"><a href="#contact">
+                        <li class="global-menu-list__item" id="blog-btn"><a href="#blog">
+                                <p class="menu-title">BLOG</p>
+                                <p class="menu-sub">ブログ</p></a></li>
+                        <li class="global-menu-list__item" id="contact-btn"><a href="#contact">
                                 <p class="menu-title">CONTACT</p>
                                 <p class="menu-sub">お問い合わせ</p></a></li>
-                        <li class="global-menu-list__item"><a href="#faq">
-                                <p class="menu-title">FAQ</p>
-                                <p class="menu-sub">よくある質問</p></a></li>
-                        <li class="global-menu-list__item"><a href="#company">
+                        <li class="global-menu-list__item" id="company-btn"><a href="#company">
                                 <p class="menu-title">COMPANY</p>
                                 <p class="menu-sub">会社概要</p></a></li>
-                        <li class="global-menu-list__item"><a href="#download">
+                        <li class="global-menu-list__item" id="download-btn"><a href="#download">
                                 <p class="menu-title">DOWNLOAD</p>
                                 <p class="menu-sub">パンフレット</p></a></li>
                     </ul>
@@ -96,7 +97,7 @@
                             <h4 class="list__item-title f-jp">様々シーンで活躍する高い汎用性</h4>
                             <p class="list__item-text">
                                 コーナー取りも簡単にできるためイベントの動線作りにも役立ちます。
-                                ご購入の場合は、豊富な色とサイズからお選びいただけ、ご希望のロゴも入れられます。<br>
+                                ご購入の場合は、豊富な色とサイズからお選び頂けます。<br>
                                 レンタルは、赤 x 白 or 青 x 白の２パターンですが、ステッカーやカバーをかけるなど
                                 装飾が可能であり、現場にあった雰囲気を作ることができます。
                             </p>
@@ -143,7 +144,7 @@
                                     <tbody>
                                         <tr>
                                             <th>料金</th>
-                                            <td>15,000円</td>
+                                            <td>15,000円/個</td>
                                         </tr>
                                         <tr>
                                             <th>カラー</th>
@@ -151,28 +152,28 @@
                                         </tr>
                                         <tr>
                                             <th>サイズ</th>
-                                            <td>
+                                            <td class="table-bg">
                                                 ４種類（mm）<br>
-                                                1.600x300x250
-                                                2.1000x500x380<br>
-                                                3.1200x800x400
-                                                4.1500x1200x600
+                                                ① 600x300x250
+                                                ② 1000x500x380<br>
+                                                ③ 1200x800x400
+                                                ④ 1500x1200x600
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <table class="price-table">
+                                <table class="price-table mb-5">
                                     <thead>
                                         <tr>
-                                            <th colspan="2">レンタル</th>
+                                            <th class="bg-g" colspan="2">レンタル</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <th>料金</th>
                                             <td>
-                                                ３日間　９００/個
-                                                ４日以降　１００円加算/日
+                                                ３日間　900/個<br>
+                                                ４日以降　100円加算/日
                                             </td>
                                         </tr>
                                         <tr>
@@ -181,11 +182,11 @@
                                         </tr>
                                         <tr>
                                             <th>サイズ</th>
-                                            <td>１種類（mm）　1.1000x500x380</td>
+                                            <td>１種類（mm）　① 1000x500x380</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <p class="cuption">
+                                <p class="price-caution">
                                     ※連結ベルト、金具は別途料金（個数により変動します）<br>
                                     ※運賃・施工量等はご相談ください。<br>
                                     ※４トン車（約135m分）、１０トン車で300個（約270m分）の設置が可能です。
@@ -223,14 +224,14 @@
                         フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう可能性がございます。<br>
                         迷惑メールフォルダもご確認いただきますようお願いいたします。
                     </p>
-                    <form action="send.php" method="post">
+                    <form id="contact-form" action="send.php" method="post">
                         <div class="contact">
                             <div class="row">
                                 <div class="contact-title required">
                                     <p>会社名（個人の方は個人と記入ください）</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="name">
+                                    <input type="input" name="company-name" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -238,7 +239,7 @@
                                     <p>ご担当者名</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="type">
+                                    <input type="input" name="name" required>
                                 </div>
                             </div>
                             <div class="row">
@@ -246,7 +247,7 @@
                                     <p>メールアドレス</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="type">
+                                    <input type="email" name="email" required>
                                     <p class="x-small caution">
                                         フリーメールアドレスの場合、返信メールが迷惑メールフォルダに振り分けられてしまう
                                         可能性がございます。迷惑メールフォルダもご確認いただきますようお願い致します。
@@ -258,9 +259,9 @@
                                     <p>電場番号</p>
                                 </div>
                                 <div class="contact-input tel">
-                                    <input class="tel" type="input" name="type"><span class="quote">-</span>
-                                    <input class="tel" type="input" name="type"><span class="quote">-</span>
-                                    <input class="tel" type="input" name="type">
+                                    <input class="tel" type="input" name="tel1" required pattern="[0-9]{3,4}"><span class="quote">-</span>
+                                    <input class="tel" type="input" name="tel2" required pattern="[0-9]{3,4}"><span class="quote">-</span>
+                                    <input class="tel" type="input" name="te3" required pattern="[0-9]{3,4}">
                                 </div>
                             </div>
                             <div class="row">
@@ -268,46 +269,46 @@
                                     <p>お問い合わせ内容</p>
                                 </div>
                                 <div class="contact-input">
-                                    <textarea></textarea>
+                                    <textarea name="contact" required></textarea>
                                 </div>
                             </div>
                         </div>
                         <p class="c-red mt-20 mb-10">レンタルについてのお問い合わせの方は、以下の質問にもお答えください。</p>
                         <div class="contact">
                             <div class="row">
-                                <div class="contact-title required">
+                                <div class="contact-title">
                                     <p>ご利用期間</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="type">
+                                    <input type="input" name="period">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="contact-title required">
+                                <div class="contact-title">
                                     <p>ご利用場所</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="type">
+                                    <input type="input" name="place">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="contact-title required">
+                                <div class="contact-title">
                                     <p>ご利用内容</p>
                                 </div>
                                 <div class="contact-input">
-                                    <input type="input" name="type">
+                                    <input type="input" name="contents">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="contact-title required">
+                                <div class="contact-title">
                                     <p>その他</p>
                                 </div>
                                 <div class="contact-input">
-                                    <textarea></textarea>
+                                    <textarea name="other"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <input class="submit-btn" type="submit" value="送信確認">
+                        <button class="submit-btn">送信</button>
                     </form>
                 </div>
             </section>
@@ -324,13 +325,14 @@
                             〒331-0801　埼玉県さいたま市北区今羽町77-1<br>
                             TEL048-783-4040　FAX048-669-8126　MAIL info@blocco-ss.com
                         </p>
-                        <div class="fb"><a href="#"><i class="fa fa-facebook-official"></i></a></div>
+                        <div class="fb"><a href="https://www.facebook.com/pg/BLOCCO-135400390488688/reviews/?ref=page_internal" target="_blank"><i class="fa fa-facebook-official"></i></a></div>
                     </div>
                 </div>
             </section>
         </div>
-        <footer class="footer"><small class="copy"><i class="fa fa-copyright"></i>BLOCCO 2018.</small></footer>
+        <footer class="footer"><small class="copy"><i class="fa fa-copyright"></i>BLOCCO 2018.</small></footer><a class="top-btn" href="#"><span>page top</span></a>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/sweetalert2.min.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
