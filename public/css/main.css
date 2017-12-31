@@ -1191,6 +1191,13 @@ textarea:focus {
   width: 50%;
 }
 
+.left-box img,
+.right-box img {
+  max-width: 256px;
+  display: block;
+  margin: auto;
+}
+
 @media screen and (max-width: 480px) {
   .left-box,
   .right-box {
@@ -1202,7 +1209,7 @@ textarea:focus {
 .price-table {
   width: 100%;
   background: white;
-  margin: 0 10px 20px;
+  margin: 0 10px 5px;
   border-collapse: collapse;
   border: 1px solid black;
   line-height: 1.6;
@@ -1217,7 +1224,7 @@ textarea:focus {
 .price-table th,
 .price-table td {
   vertical-align: middle;
-  height: 40px;
+  height: 25px;
   padding: 0 10px;
   border-collapse: collapse;
   border: 1px solid black;
@@ -1272,10 +1279,17 @@ textarea:focus {
 
 .price-caution {
   margin: 0 10px;
+  line-height: 1.3 !important;
+}
+
+.yellow-area {
+  background-color: #fffdee;
+  padding: 20px 0 10px;
+  margin: 40px 0 20px;
 }
 
 /* ==================
-  hader
+  header
 ================== */
 .header {
   position: relative;
@@ -1400,7 +1414,7 @@ textarea:focus {
 .global-menu-list__item {
   position: relative;
   float: left;
-  width: 20%;
+  width: calc(100% / 6);
   text-align: center;
 }
 
@@ -1641,6 +1655,7 @@ textarea:focus {
 
 .list.column-4 .list__item {
   width: 23.5%;
+  margin-bottom: 20px;
 }
 
 .list.column-4 .list__item:not(:nth-child(4n)) {
@@ -1660,12 +1675,42 @@ textarea:focus {
   }
 }
 
+.table {
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+
 /* ==================
   box
 ================== */
 .yellow-box {
   background-color: #fffdee;
   border: 1px solid #b6b6b4;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.white-box {
+  background-color: white;
+  border: 1px solid #efefef;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.gray-box {
+  background-color: #b4b4b4;
+  border: 1px solid black;
   letter-spacing: 2px;
   font-size: 1.2rem;
   line-height: 1.2;
@@ -1795,6 +1840,33 @@ p.caution {
 /* ==================
   faq
 ================== */
+.faq-box__f, .faq-box__a {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.faq-box__f p, .faq-box__a p {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.faq-box__f p:first-child, .faq-box__a p:first-child {
+  width: 50px;
+  text-align: center;
+}
+
+.faq-box__f p:nth-of-type(2), .faq-box__a p:nth-of-type(2) {
+  width: calc(100% - 50px);
+}
+
+.faq-box__f {
+  background-color: #efefef;
+}
+
+.faq-box__f p {
+  color: #3a77b6;
+}
+
 /* ==================
   company
 ================== */

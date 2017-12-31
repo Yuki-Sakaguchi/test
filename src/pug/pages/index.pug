@@ -49,7 +49,7 @@ block body
               p 専用ベルトで<br class="pc-elm">数100mの連列可能
           .white
             .belt-inner
-              p 司会をさえぎらない<br class="pc-elm">ジャストサイズ
+              p 視界をさえぎらない<br class="pc-elm">ジャストサイズ
           .red
             .belt-inner
               p レイアウトが自由自在
@@ -85,6 +85,22 @@ block body
           li.list__item
             img.list__item-img(src="./images/2-4.png")
             p.list__item-text 設置は弊社にお任せください！
+          li.list__item
+            img.list__item-img(src="./images/bg-gray.png")
+          li.list__item
+            img.list__item-img(src="./images/3-1.png")
+          li.list__item
+            img.list__item-img(src="./images/3-2.png")
+          li.list__item
+            img.list__item-img(src="./images/3-3.png")
+          li.list__item
+            img.list__item-img(src="./images/3-4.png")
+          li.list__item
+            img.list__item-img(src="./images/3-5.png")
+          li.list__item
+            img.list__item-img(src="./images/3-6.png")
+          li.list__item
+            img.list__item-img(src="./images/3-7.png")
 
       .youtube-area
         .inner
@@ -99,13 +115,13 @@ block body
           
           .cf
             .left-box
-              img(src="./images/barrier2_sizes.png")
+              img(src="./images/price1.png")
 
             .right-box
               table.price-table
                 thead
                   tr
-                    th(colspan="2") 購入
+                    th(colspan="2") 販売
                 tbody
                   tr
                     th 料金
@@ -115,12 +131,7 @@ block body
                     td ５色（赤、青、緑、黄色、白）
                   tr
                     th サイズ
-                    td.table-bg
-                      |４種類（mm）<br>
-                      |① 600x300x250
-                      |② 1000x500x380<br>
-                      |③ 1200x800x400
-                      |④ 1500x1200x600
+                    td 1000x500x380
                 
               table.price-table.mb-5
                 thead
@@ -134,15 +145,53 @@ block body
                       |４日以降　100円加算/日
                   tr
                     th カラー
-                    td ２種類（「赤x白」,「青x白」）
+                    td ２種類（「赤x白」、「青x白」）
                   tr
                     th サイズ
-                    td １種類（mm）　① 1000x500x380
-                
+                    td 1000x500x380
+
               p.price-caution
                 |※連結ベルト、金具は別途料金（個数により変動します）<br>
                 |※運賃・施工量等はご相談ください。<br>
                 |※４トン車（約135m分）、１０トン車で300個（約270m分）の設置が可能です。
+
+      .yellow-area
+        .inner  
+          .cf
+            .left-box
+              img(src="./images/barrier2_sizes.png")
+
+            .right-box
+              p.f-red.f-xlarge.mt-10.mb-10
+                |販売品には、他のサイズもございます。<br>
+                |料金等はご相談下さい。
+
+              p
+                |４種類（mm）<br>
+                |① 600x300x250 ② 1000x500x380<br>
+                |③ 1200x800x400 ④ 1500x1200x600<br>
+                |※納期３〜４ヶ月（各サイズ最低注文数の設定あり）
+          
+          p.al-c.white-box.mt-20.mb-20
+            |メニューからパンフレットがダウンロードできます
+
+      .inner
+        ul.list.column-4.mb-20
+          li.list__item
+            img.list__item-img(src="./images/bg-gray2.png")
+          li.list__item
+            img.list__item-img(src="./images/setup1.png")
+            p.list__item-text 
+          li.list__item
+            img.list__item-img(src="./images/setup2.png")
+            p.list__item-text 車両を用いる場の安全対策に
+          li.list__item
+            img.list__item-img(src="./images/setup3.png")
+            p.list__item-text 車両を用いる場の安全対策に
+
+        p.al-c.gray-box.mb-20
+          |TecPro Barriersは、ただ置くだけでは最大限に効果を発揮できません。設営は弊社にお任せ下さい！
+
 
     //- BLOG
     section.section.bg-w#blog
@@ -243,12 +292,32 @@ block body
 
 
     //- faq
-    //- section.section.bg-w#faq
-    //-   .inner
+    section.section.bg-w#faq
+      .inner
+        hgoup.section-title
+          h2 FAQ
+          h3 よくある質問
 
-    //-       hgoup.section-title
-    //-         h2 FAQ
-    //-         h3 よくある質問
+        -
+          var faqList = [
+            { f: "見積もりは出してもらえますか？", a: "だいたいの利用個数、利用場所がお分かりであればお見積書を作成します。お問い合わせください。" },
+            { f: "キャンセル料はかかりますか？", a: "個数、期間、場所等により変わりますので、一度ご相談ください。" },
+            { f: "破損した場合はどうすれば良いですか？", a: "多少の傷は大丈夫ですが、穴があいたり割れた場合は販売価格をご請求させていただきます。" },
+            { f: "料金の支払い方法を教えてください。", a: "銀行振り込みのみとさせていただきます。" },
+            { f: "実際に利用する前日（搬入日）から料金が発生しますか？", a: "利用日の前日（搬入日）と翌日（撤収日）に関しましては、料金は発生しません。" },
+            { f: "延長は可能ですか？", a: "在庫があれば延長が可能です。一度ご相談ください。" },
+            { f: "１日だけのレンタルはやっていますか？", a: "１日だけのレンタルの場合でも、料金は３日間分ご請求させていただきます。" },
+            { f: "設置は必ずお願いしなければいけませんか？", a: "正しい設置をしなければ効果を発揮しないため弊社で設置いたします。" },
+            { f: "土日祝や早朝の設営は可能ですか？", a: "はい。事前にご希望日時をお伝え頂ければその時間に合わせます。" }
+          ];
+
+        dl.faq-box
+          each item, index in faqList
+            dt.faq-box__f <p>Q#{index+1}</p><p>#{item.f}</p>
+            dd.faq-box__a <p>A#{index+1}</p><p>#{item.a}</p>
+
+        p.al-c.yellow-box.mt-20.large.f-jp メニューからバンプレットがダウンロードできます。
+
 
     //- company
     section.section#company
