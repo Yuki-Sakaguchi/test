@@ -74,7 +74,6 @@ $(function() {
       // end item 成形
       var htmlstr = '';
 			for (i in data) {
-        console.log(data[i]);
         var eltime = new Date(data[i].pubDate.text);
 
         htmlstr += '<li class="list__item">';
@@ -138,8 +137,6 @@ $(function() {
             // 入力値を初期化
             $form[0].reset();
             result = JSON.parse(result);
-            console.log(result[0]);
-            console.log(result[0] == 'error');
             if (result[0] == 'error') {
               swal('送信に失敗しました。')
               return false;

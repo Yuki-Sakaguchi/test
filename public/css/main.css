@@ -1664,8 +1664,11 @@ textarea:focus {
 
 @media screen and (max-width: 480px) {
   .list.column-4 .list__item {
-    width: 49%;
+    width: 48%;
     margin-bottom: 20px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
   }
   .list.column-4 .list__item:not(:nth-child(4n)) {
     margin-right: 0;
