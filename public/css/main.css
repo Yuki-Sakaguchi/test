@@ -1295,11 +1295,11 @@ textarea:focus {
   position: relative;
   display: block;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 75px);
   background-image: url("../images/top.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
 }
 
 @media screen and (max-width: 780px) {
@@ -1322,7 +1322,7 @@ textarea:focus {
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 10vw;
+  top: 12vw;
 }
 
 @media screen and (max-width: 780px) {
@@ -1342,15 +1342,17 @@ textarea:focus {
   }
 }
 
+.main-logo {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 /* ==================
   global menu
 ================== */
 .global-menu {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
   background-color: white;
 }
 
@@ -1368,7 +1370,7 @@ textarea:focus {
     transform: translateX(100%);
   }
   .global-menu .inner {
-    margin-top: 24vh;
+    margin-top: 15vh;
   }
   .global-menu.js-active {
     transform: translateX(0);
@@ -1928,6 +1930,13 @@ p.caution {
   height: 50px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  z-index: 100000;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.top-btn.js-active {
+  opacity: 1;
 }
 
 .top-btn span {

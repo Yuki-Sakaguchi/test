@@ -191,11 +191,11 @@
   position: relative;
   display: block;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 75px);
   background-image: url($IMG+"top.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center bottom;
 
   @include mq-m() {
     height: 500px;
@@ -214,7 +214,7 @@
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 10vw;
+  top: 12vw;
 
   @include mq-m() {
     text-align: center;
@@ -230,16 +230,23 @@
   }
 }
 
+.main-logo {
+  width: 150px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
 
 /* ==================
   global menu
 ================== */
 .global-menu {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+  // left: 0;
+  // margin: auto;
   background-color: $C_WHITE;
 
   @include mq-s() {
@@ -255,7 +262,7 @@
     transform: translateX(100%);
 
     .inner {
-      margin-top: 24vh;
+      margin-top: 15vh;
     }
 
     &.js-active {
@@ -832,6 +839,13 @@ p.caution {
   height: 50px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
+  z-index: 100000;
+  opacity: 0;
+  transition: 0.3s;
+
+  &.js-active {
+    opacity: 1;
+  }
 
   span {
     color: white;

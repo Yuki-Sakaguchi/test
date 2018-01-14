@@ -153,5 +153,39 @@ $(function() {
           swal('送信に失敗しました。')
         }
     });
+  });
 });
+
+
+// トップボタン
+$(function() {
+  var $topBtn = $('.top-btn');
+  var $window = $(window);
+  var className = 'js-active';
+
+  $window.on('scroll', function() {
+    if ($window.scrollTop() > 100) {
+      $topBtn.addClass(className);
+    } else {
+      $topBtn.removeClass(className);
+    }
+  });
+});
+
+
+// スライダー
+$(function() {
+  $(".header").bgswitcher({
+    images: [
+      "./images/slider/slide_01.png",
+      "./images/slider/slide_02.jpg",
+      "./images/slider/slide_03.jpg",
+      "./images/slider/slide_04.jpg",
+      "./images/slider/slide_05.jpg",
+      "./images/slider/slide_06.jpg",
+      "./images/slider/slide_07.jpg",
+      "./images/slider/slide_08.jpg",
+      "./images/slider/slide_09.jpg",
+    ],
+  });
 });
