@@ -182,7 +182,6 @@ $(function() {
       "./images/slider/slide_03.jpg",
       "./images/slider/slide_04.jpg",
       "./images/slider/slide_05.jpg",
-      "./images/slider/slide_06.jpg",
       "./images/slider/slide_07.jpg",
       "./images/slider/slide_08.jpg",
       "./images/slider/slide_09.jpg",

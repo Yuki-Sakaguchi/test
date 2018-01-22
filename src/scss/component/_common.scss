@@ -20,7 +20,7 @@
   wrapper
 ================== */
 .wrapper {
-  
+  overflow: hidden;
 }
 
 .inner {
@@ -214,7 +214,7 @@
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 12vw;
+  top: 25%;
 
   @include mq-m() {
     text-align: center;
@@ -224,17 +224,26 @@
 
   @include mq-s() {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     top: 110px;
     padding: 20px 0;
+    line-height: 1.3;
   }
 }
 
 .main-logo {
-  width: 150px;
+  width: 350px;
   position: absolute;
   top: 20px;
   left: 20px;
+
+  @include mq-m() {
+    width: 180px;
+  }
+
+  @include mq-s() {
+    width: 100px;
+  }
 }
 
 
@@ -249,7 +258,7 @@
   // margin: auto;
   background-color: $C_WHITE;
 
-  @include mq-s() {
+  @include mq-m() {
     position: fixed;
     top: 0;
     right: 0;
@@ -271,6 +280,7 @@
   }
 
   .close-btn {
+    display: none;
     position: absolute;
     top: 30px;
     right: 0;
@@ -278,6 +288,10 @@
     margin: auto;
     width: 30px;
     height: 30px;
+
+    @include mq-m() {
+      display: block;
+    }
 
     &:before,
     &:after {
@@ -307,7 +321,7 @@
     &__item {
       position: relative;
       float: left;
-      width: calc(100% / 6);
+      width: (100% / 7);
       text-align: center;
 
       &:before {
@@ -327,14 +341,14 @@
         }
       }
 
-      @include mq-s() {
+      @include mq-m() {
         float: none;
         width: 100% !important;
       }
 
       a {
         display: block;
-        padding: 20px 0;
+        padding: 15px 0;
         color: $C_BLACK;
       }
     }
@@ -354,6 +368,7 @@
 }
 
 .toggle-menu {
+  display: none;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -364,6 +379,10 @@
   background-color: $C_WHITE;
   z-index: 9999;
   border-radius: 50%;
+
+  @include mq-m() {
+    display: block;
+  }
 
   span {
     position: absolute;
@@ -418,6 +437,12 @@
     @include mq-m() {
       width: 80%;
       margin-bottom: 10px;
+    }
+
+    @include mq-s() {
+      width: 95%;
+      margin-bottom: 10px;
+      margin-left: 5%;
     }
 
     &:before {
@@ -613,7 +638,8 @@
   background-color: darken($C_DARK_GRAY , 15);
   border: 1px solid $C_BLACK;
   letter-spacing: 2px;
-  font-size: 1.2rem;
+  padding: 20px;
+  font-size: 1.4rem !important;
   line-height: 1.2;
 }
 

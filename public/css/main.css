@@ -1125,6 +1125,10 @@ textarea:focus {
 /* ==================
   wrapper
 ================== */
+.wrapper {
+  overflow: hidden;
+}
+
 .inner {
   position: relative;
   z-index: 1;
@@ -1322,7 +1326,7 @@ textarea:focus {
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 12vw;
+  top: 25%;
 }
 
 @media screen and (max-width: 780px) {
@@ -1336,17 +1340,30 @@ textarea:focus {
 @media screen and (max-width: 480px) {
   .main-title {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     top: 110px;
     padding: 20px 0;
+    line-height: 1.3;
   }
 }
 
 .main-logo {
-  width: 150px;
+  width: 350px;
   position: absolute;
   top: 20px;
   left: 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .main-logo {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-logo {
+    width: 100px;
+  }
 }
 
 /* ==================
@@ -1356,7 +1373,7 @@ textarea:focus {
   background-color: white;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
   .global-menu {
     position: fixed;
     top: 0;
@@ -1378,6 +1395,7 @@ textarea:focus {
 }
 
 .global-menu .close-btn {
+  display: none;
   position: absolute;
   top: 30px;
   right: 0;
@@ -1385,6 +1403,12 @@ textarea:focus {
   margin: auto;
   width: 30px;
   height: 30px;
+}
+
+@media screen and (max-width: 780px) {
+  .global-menu .close-btn {
+    display: block;
+  }
 }
 
 .global-menu .close-btn:before, .global-menu .close-btn:after {
@@ -1416,7 +1440,7 @@ textarea:focus {
 .global-menu-list__item {
   position: relative;
   float: left;
-  width: calc(100% / 6);
+  width: 14.28571%;
   text-align: center;
 }
 
@@ -1435,7 +1459,7 @@ textarea:focus {
   height: 3px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 780px) {
   .global-menu-list__item {
     float: none;
     width: 100% !important;
@@ -1444,7 +1468,7 @@ textarea:focus {
 
 .global-menu-list__item a {
   display: block;
-  padding: 20px 0;
+  padding: 15px 0;
   color: black;
 }
 
@@ -1455,6 +1479,7 @@ textarea:focus {
 }
 
 .toggle-menu {
+  display: none;
   position: fixed;
   top: 10px;
   right: 10px;
@@ -1465,6 +1490,12 @@ textarea:focus {
   background-color: white;
   z-index: 9999;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 780px) {
+  .toggle-menu {
+    display: block;
+  }
 }
 
 .toggle-menu span {
@@ -1523,6 +1554,14 @@ textarea:focus {
   .belt > div {
     width: 80%;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .belt > div {
+    width: 95%;
+    margin-bottom: 10px;
+    margin-left: 5%;
   }
 }
 
@@ -1717,7 +1756,8 @@ textarea:focus {
   background-color: #b4b4b4;
   border: 1px solid black;
   letter-spacing: 2px;
-  font-size: 1.2rem;
+  padding: 20px;
+  font-size: 1.4rem !important;
   line-height: 1.2;
 }
 
