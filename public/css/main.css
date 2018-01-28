@@ -191,7 +191,7 @@ textarea:focus {
 }
 
 .f-xlarge {
-  font-size: 1.4em !important;
+  font-size: 1.6em !important;
 }
 
 .f-large {
@@ -1185,7 +1185,7 @@ textarea:focus {
 
 .section p {
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #444;
 }
 
@@ -1246,11 +1246,11 @@ textarea:focus {
 }
 
 .price-table tbody th {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .price-table tbody td {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 80%;
 }
 
@@ -1625,9 +1625,16 @@ textarea:focus {
 .belt > div p {
   display: table-cell;
   vertical-align: middle;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.3;
-  padding-left: 10px;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 960px) {
+  .belt > div p {
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
 }
 
 /* ==================
@@ -1821,7 +1828,7 @@ textarea:focus {
 
 .contact-input {
   width: 60%;
-  padding: 12px 30px;
+  padding: 14px 30px;
   border-left: 1px solid #dadada;
 }
 
@@ -1856,7 +1863,7 @@ textarea:focus {
 }
 
 p.caution {
-  color: #aaa;
+  color: #666;
   margin-top: 10px;
 }
 
