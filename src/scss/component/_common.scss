@@ -190,19 +190,20 @@
 .header {
   position: relative;
   display: block;
-  width: 100vw;
-  height: calc(100vh - 75px);
+  max-width: $BP_L;
+  height: 400px;
+  margin: auto;
   background-image: url($IMG+"top.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
 
   @include mq-m() {
-    height: 500px;
+    height: 300px;
   }
 
   @include mq-s() {
-    height: 300px;
+    height: 250px;
   }
 }
 
@@ -214,25 +215,23 @@
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 25%;
+  top: 30%;
 
   @include mq-m() {
     text-align: center;
     font-size: 3rem;
-    top: 160px;
   }
 
   @include mq-s() {
     text-align: center;
     font-size: 2rem;
-    top: 110px;
     padding: 20px 0;
     line-height: 1.3;
   }
 }
 
 .main-logo {
-  width: 350px;
+  width: 200px;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -640,8 +639,8 @@
 }
 
 .gray-box {
-  background-color: darken($C_DARK_GRAY , 15);
-  border: 1px solid $C_BLACK;
+  background-color: $C_YELLOW;
+  border: 1px solid $C_DARK_YELLOW;
   letter-spacing: 2px;
   padding: 20px;
   font-size: 1.4rem !important;
