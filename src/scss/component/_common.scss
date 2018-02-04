@@ -172,6 +172,16 @@
   }
 }
 
+.top-banner {
+  width: 50%;
+  display: block;
+  margin: 0 auto 50px;
+
+  @include mq-s() {
+    width: 100%;
+  }
+}
+
 .price-caution {
   margin: 0 10px;
   line-height: 1.3 !important;

@@ -1282,6 +1282,18 @@ textarea:focus {
   }
 }
 
+.top-banner {
+  width: 50%;
+  display: block;
+  margin: 0 auto 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .top-banner {
+    width: 100%;
+  }
+}
+
 .price-caution {
   margin: 0 10px;
   line-height: 1.3 !important;
