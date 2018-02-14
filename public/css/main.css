@@ -1311,8 +1311,7 @@ textarea:focus {
 .header {
   position: relative;
   display: block;
-  max-width: 960px;
-  height: 400px;
+  height: calc(100vh - 65px);
   margin: auto;
   background-image: url("../images/top.png");
   background-repeat: no-repeat;
@@ -1335,12 +1334,12 @@ textarea:focus {
 .main-title {
   color: white;
   font-size: 4rem;
-  line-height: 1.2;
+  line-height: 1.8;
   background: linear-gradient(45deg, rgba(251, 46, 0, 0.85), rgba(255, 59, 0, 0.02));
   padding: 20px 50px;
   position: absolute;
   width: 100%;
-  top: 30%;
+  top: 22%;
 }
 
 @media screen and (max-width: 780px) {
