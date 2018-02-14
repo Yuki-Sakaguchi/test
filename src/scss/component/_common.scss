@@ -205,8 +205,8 @@
   margin: auto;
   background-image: url($IMG+"top.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
+  background-size: contain;
+  background-position: center;
 
   @include mq-m() {
     height: 300px;

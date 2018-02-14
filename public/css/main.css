@@ -1315,8 +1315,8 @@ textarea:focus {
   margin: auto;
   background-image: url("../images/top.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
+  background-size: contain;
+  background-position: center;
 }
 
 @media screen and (max-width: 780px) {
